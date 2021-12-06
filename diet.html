@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<style>
+
+* {
+ outline: 0;
+ font-family: sans-serif
+}
+body {
+ background-color: #fafafa
+}
+span.msg,
+span.choose {
+ color: #555;
+ padding: 5px 0 10px;
+ display: inherit
+}
+.container {
+ width: 500px;
+ margin: 50px auto 0;
+ text-align: center
+}
+
+/*Styling Selectbox*/
+.dropdown {
+ width: 300px;
+ display: inline-block;
+ background-color: #fff;
+ border-radius: 2px;
+ box-shadow: 0 0 2px rgb(204, 204, 204);
+ transition: all .5s ease;
+ position: relative;
+ font-size: 14px;
+ color: #474747;
+ height: 100%;
+ text-align: left
+}
+.dropdown .select {
+   cursor: pointer;
+   display: block;
+   padding: 10px
+}
+.dropdown .select > i {
+   font-size: 13px;
+   color: #888;
+   cursor: pointer;
+   transition: all .3s ease-in-out;
+   float: right;
+   line-height: 20px
+}
+.dropdown:hover {
+   box-shadow: 0 0 4px rgb(204, 204, 204)
+}
+.dropdown:active {
+   background-color: #f8f8f8
+}
+.dropdown.active:hover,
+.dropdown.active {
+   box-shadow: 0 0 4px rgb(204, 204, 204);
+   border-radius: 2px 2px 0 0;
+   background-color: #f8f8f8
+}
+.dropdown.active .select > i {
+   transform: rotate(-90deg)
+}
+.dropdown .dropdown-menu {
+   position: absolute;
+   background-color: #fff;
+   width: 100%;
+   left: 0;
+   margin-top: 1px;
+   box-shadow: 0 1px 2px rgb(204, 204, 204);
+   border-radius: 0 1px 2px 2px;
+   overflow: hidden;
+   display: none;
+   max-height: 144px;
+   overflow-y: auto;
+   z-index: 9
+}
+.dropdown .dropdown-menu li {
+   padding: 10px;
+   transition: all .2s ease-in-out;
+   cursor: pointer
+}
+.dropdown .dropdown-menu {
+   padding: 0;
+   list-style: none
+}
+.dropdown .dropdown-menu li:hover {
+   background-color: #f2f2f2
+}
+.dropdown .dropdown-menu li:active {
+   background-color: #e2e2e2
+}
+</style>
+<head>
+  <meta charset="utf-8">
+  <title>NUTRI CARING</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand font-tertiary h3" href="index.html">NUTRI CARING</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bmi.html">BMI Calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Diet.html">Diet plans</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- page title -->
+<section class="page-title bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">DIET PLAN</h1>
+      </div>
+    </div>
+  </div>
+  <!-- background shapes -->
+  <img src="images/illustrations/page-title.png" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="images/illustrations/leaf-pink-round.png" alt="illustrations" class="bg-shape-2">
+
+  <img src="images/illustrations/leaf-orange.png" alt="illustrations" class="bg-shape-4">
+  <img src="images/illustrations/leaf-yellow.png" alt="illustrations" class="bg-shape-5">
+  <img src="images/illustrations/dots-group-cyan.png" alt="illustrations" class="bg-shape-6">
+  <img src="images/illustrations/leaf-cyan-lg.png" alt="illustrations" class="bg-shape-7">
+</section>
+<!-- /page title -->
+
+<!-- contact -->
+<section class="section section-on-footer" data-background="images/backgrounds/bg-dots.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">DIET PLAN FORM</h4>
+          <form action="#" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="Phone" id="phoneno" name="phone" placeholder="Enter your phone number" class="form-control px-0 mb-4">
+            </div>
+
+            <div class="col-md-6">
+              <input type="age" id="age" name="age" placeholder="Enter your age" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="text" id="gender" name="gender" placeholder="Enter your gender" class="form-control px-0 mb-4">
+            </div>
+
+            <form action="">
+
+    <label for="cars">Choose a reasons:</label>
+    <select id="cars" name="cars" class="form-control px-0 mb-4">
+      <option value="volvo">Weight Loss</option>
+      <option value="saab">Weight Gain</option>
+      <option value="fiat">Diabetes</option>
+      <option value="audi">Other</option>
+    </select>
+  </form>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /contact -->
+
+<!-- footer -->
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-light">Email</h5>
+            <p class="text-white paragraph-lg font-secondary"><a href="mailto:nutricaring@gmail.com">Nutricaring@gmail.com</a></p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light">Phone</h5>
+          <p class="text-white paragraph-lg font-secondary"></p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light">Address</h5>
+          <p class="text-white paragraph-lg font-secondary"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-top text-center border-dark py-5">
+    <p class="mb-0 text-light">Copyright ©<script>
+        var CurrentYear = new Date().getFullYear()
+        document.write(CurrentYear)
+      </script><a href="themefisher.com"></a></p>
+  </div>
+</footer>
+<!-- /footer -->
+<script>
+/*Dropdown Menu*/
+$('.dropdown').click(function () {
+        $(this).attr('tabindex', 1).focus();
+        $(this).toggleClass('active');
+        $(this).find('.dropdown-menu').slideToggle(300);
+    });
+    $('.dropdown').focusout(function () {
+        $(this).removeClass('active');
+        $(this).find('.dropdown-menu').slideUp(300);
+    });
+    $('.dropdown .dropdown-menu li').click(function () {
+        $(this).parents('.dropdown').find('span').text($(this).text());
+        $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+    });
+/*End Dropdown Menu*/
+
+
+$('.dropdown-menu li').click(function () {
+  var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
+      msg = '<span class="msg">Hidden input value: ';
+  $('.msg').html(msg + input + '</span>');
+});
+</script>
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- filter -->
+<script src="plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
