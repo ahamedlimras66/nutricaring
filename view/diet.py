@@ -1,6 +1,9 @@
-from flask import render_template,request
+from flask import render_template,request,send_from_directory
 from db import db
+import os
 from models.schema import Users
+from models.report import Report
+
 gmail = "mm4.muthumani@gmail.com"
 class Diet:
     def dietPage(self):
@@ -29,3 +32,13 @@ class Diet:
             address=address
             )
         mail.send(msg)
+
+        reportObj = Report(
+            name=name,
+            phoneNumber=phone,
+            address=address,
+            reason=reasons,
+        )
+        reportObj.make()
+        workingdir = os.path.abspath(os.getcwd())
+        return send_from_directory(workingdir, reportObj.reportFile)
