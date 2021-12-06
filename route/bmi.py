@@ -1,5 +1,5 @@
 from flask import Blueprint
-from model.bmi import Bmi
+from view.bmi import Bmi
 
 bmi = Blueprint("bmi", __name__)
 

@@ -1,5 +1,5 @@
 from flask import Blueprint
-from model.contact import Contact
+from view.contact import Contact
 
 contact = Blueprint("contact", __name__)
 
