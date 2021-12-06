@@ -1,5 +1,5 @@
 from flask import Blueprint
-from model.about import About
+from view.about import About
 
 about = Blueprint("about", __name__)
 
