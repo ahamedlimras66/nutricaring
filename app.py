@@ -20,8 +20,8 @@ app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 
 @app.before_first_request
-def create_tables():
-	db.create_all()
+def create_table():
+    db.create_all()
 
 app.register_blueprint(home, url_prefix="/")
 app.register_blueprint(about, url_prefix="/about")
