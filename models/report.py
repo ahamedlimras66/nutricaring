@@ -46,6 +46,11 @@ class Report:
         page = existing_pdf.getPage(0)
         page.mergePage(new_pdf.getPage(0))
         output.addPage(page)
+
+        for i in range(7):
+            page = existing_pdf.getPage(1)
+            output.addPage(page)
+
         outputStream = open(self.reportFile, "wb")
         output.write(outputStream)
         outputStream.close()
