@@ -1,8 +1,8 @@
 from flask import Blueprint
-from view.health import Health
+from view.life import Life
 
-health = Blueprint("health", __name__)
+life = Blueprint("life", __name__)
 
-healthObj = Health()
+lifeObj = Life()
 
-health.add_url_rule("/", view_func=healthObj.healthPage, methods=['GET'])
+life.add_url_rule("/", view_func=lifeObj.lifePage, methods=['GET'])

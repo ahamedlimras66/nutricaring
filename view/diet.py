@@ -17,8 +17,10 @@ class Diet:
         gender=request.args.get('gender')
         reasons=request.args.get('reasons')
         address=request.args.get('address')
+        weight=request.args.get('weight')
+        height=request.args.get('height')
 
-        userObj = Users(full_name=name,phone=phone,age=age,gender=gender,reason=reasons,address=address)
+        userObj = Users(full_name=name,phone=phone,age=age,gender=gender,reason=reasons,address=address,weight=weight,height=height)
         db.session.add(userObj)
         db.session.commit()
 
@@ -38,6 +40,8 @@ class Diet:
             phoneNumber=phone,
             address=address,
             reason=reasons,
+            weight=weight,
+            height=height
         )
         reportObj.make()
         workingdir = os.path.abspath(os.getcwd())

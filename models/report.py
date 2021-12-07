@@ -4,11 +4,13 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 
 class Report:
-    def __init__(self, name, phoneNumber, address, reason, formatFile = "diet.pdf", reportFile = "report.pdf", font='Helvetica-Bold'):
+    def __init__(self, name, phoneNumber, address, reason, weight, height, formatFile = "diet.pdf", reportFile = "report.pdf", font='Helvetica-Bold'):
         self.name = name
         self.phoneNumber = phoneNumber
         self.address = address
         self.reason = reason
+        self.weight = weight
+        self.height = height
         self.formatFile = formatFile
         self.reportFile = reportFile
         self.font = font
@@ -33,6 +35,9 @@ class Report:
         for i in self.split(self.address):
             can.drawString(self.startX, self.startY, i)
             self.startY-=25
+        self.startY-=50
+        can.setFont(self.font, 15)
+        can.drawString(20, self.startY, "Weight: {}, Height: {}".format(self.weight,self.height))
         self.startY-=50
         can.setFont(self.font, 25)
         can.drawString(30, self.startY, self.reason)

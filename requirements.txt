@@ -7,5 +7,6 @@ Werkzeug==1.0.1
 Flask-Mail==0.9.1
 PyPDF2===1.26.0
 reportlab===3.6.1
+Jinja2===2.11.3
 psycopg2
 uwsgi
