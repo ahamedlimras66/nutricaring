@@ -5,6 +5,7 @@ reportlab===3.6.1
 Flask-Cors==1.10.3
 flask_sqlalchemy===2.4.1
 Flask-Mail===0.9.1
+flask-sqlalchemy
 SQLAlchemy
 uwsgi
 psycopg2
