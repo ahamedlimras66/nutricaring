@@ -45,4 +45,5 @@ class Diet:
         )
         reportObj.make()
         workingdir = os.path.abspath(os.getcwd())
+        print(weight,height)
         return send_from_directory(workingdir, reportObj.reportFile)
