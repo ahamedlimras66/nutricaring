@@ -1,4 +1,5 @@
 import os
+from models.schema import *
 from flask import Flask
 from route.home import home
 from route.about import about
