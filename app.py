@@ -24,11 +24,11 @@ mail = Mail(app)
 def create_table():
     db.create_all()
 
-app.register_blueprint(home, url_prefix="/")
-app.register_blueprint(about, url_prefix="/about")
-app.register_blueprint(bmi, url_prefix="/bmi/")
-app.register_blueprint(contact, url_prefix="/contact")
-app.register_blueprint(diet, url_prefix="/diet")
+# app.register_blueprint(home, url_prefix="/")
+# app.register_blueprint(about, url_prefix="/about")
+# app.register_blueprint(bmi, url_prefix="/bmi/")
+# app.register_blueprint(contact, url_prefix="/contact")
+# app.register_blueprint(diet, url_prefix="/diet")
 
 if __name__ == "__main__":
     from db import db
