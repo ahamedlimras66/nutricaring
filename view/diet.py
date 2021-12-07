@@ -8,7 +8,7 @@ gmail = "mm4.muthumani@gmail.com"
 class Diet:
     def dietPage(self):
         return render_template("diet.html")
-        
+
     def storeData(self):
         from app import mail, Message
         name=request.args.get('name')

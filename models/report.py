@@ -49,4 +49,3 @@ class Report:
         outputStream = open(self.reportFile, "wb")
         output.write(outputStream)
         outputStream.close()
-
