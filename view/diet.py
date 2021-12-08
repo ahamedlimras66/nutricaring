@@ -4,7 +4,7 @@ import os
 from models.schema import Users
 from models.report import Report
 
-gmail = "rismiyasif21@gmail.com"
+gmail = "limraslim@gmail.com"
 class Diet:
     def dietPage(self):
         return render_template("diet.html")
@@ -31,7 +31,9 @@ class Diet:
             mail=gmail,
             option=reasons,
             number=phone,
-            address=address
+            address=address,
+            weight=weight,
+            height=height
             )
         mail.send(msg)
 
